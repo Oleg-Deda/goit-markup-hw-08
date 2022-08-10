@@ -1,0 +1,24 @@
+.about {
+  @extend %section;
+  padding-top: 0;
+}
+
+.about__list {
+  @extend %reset-list;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent);
+}
+
+.about__item {
+  position: relative;
+}
+.about__descr {
+  position: absolute;
+  display: flex;
+  width: 370px;
+  height: 70px;
+  bottom: 0;
+  right: 0;
+  background: rgba(47, 48, 58, 0.8);
+}

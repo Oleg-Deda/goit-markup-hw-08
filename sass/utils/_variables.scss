@@ -1,0 +1,25 @@
+:root {
+  /* Color */
+  --primary-color: #757575;
+  --secondary-color: #212121;
+  --accent-color: #2196f3;
+  --logo-color: #000000;
+  --primary-white-color: #ffffff;
+  --bg-darkgrey-color: #2f303a;
+  --secondary-bg-color: #f5f4fa;
+  --header-border: #ececec;
+  --card-border: #eeeeee;
+  --icon-color: #afb1b8;
+  --hero-bg-color: #c4c4c4;
+
+  /* Fonts */
+  --main-font-family: 'Roboto', sans-serif;
+  --logo-font: 'Raleway', sans-serif;
+
+  /* others */
+  --indent: 30px;
+  --filter-indent: 8px;
+  --items: 3;
+  --border-radius-standart: 4px;
+  --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
