@@ -1,15 +1,18 @@
 .container {
   padding-left: 15px;
   padding-right: 15px;
-  margin: 0 auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: auto;
+  margin-left: auto;
 
   // width: 1200px;
-  // outline: 2px solid red;
-  // outline-offset: -2px;
+  outline: 2px solid red;
+  outline-offset: -2px;
 
   // breakpoint 480px for mobile screen
   @media screen and (min-width: 480px) {
-    width: 480px;
+    width: 450px;
   }
 
   // breakpoint 480px for tablet screen
