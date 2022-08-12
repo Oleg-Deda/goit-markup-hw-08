@@ -7,14 +7,17 @@
   // outline: 2px solid red;
   // outline-offset: -2px;
 
+  // breakpoint 480px for mobile screen
   @media screen and (min-width: 480px) {
     width: 480px;
   }
 
+  // breakpoint 480px for tablet screen
   @media screen and (min-width: 768px) {
     width: 768px;
   }
 
+  // breakpoint 480px for desctop screen
   @media screen and (min-width: 1200px) {
     width: 1200px;
   }
