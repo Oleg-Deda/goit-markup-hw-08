@@ -28,7 +28,7 @@
 
 .socials__link {
   @extend %reset-link;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 44px;
@@ -36,6 +36,7 @@
   color: var(--icon-color);
   border-radius: 50%;
   transition: background-color var(--animation), color var(--animation);
+  text-decoration: none;
 
   &:hover,
   &:focus {
@@ -44,15 +45,19 @@
   }
 }
 
+.socials__list + .socials__list {
+  margin-left: 10px;
+}
+
 .socials__list {
   @extend %reset-list;
   display: flex;
   align-items: center;
-  gap: 10px;
+  // gap: 10px;
   justify-content: center;
 }
 
-.socials__icon {
-  transition: fill var(--cubic);
-  fill: currentColor;
-}
+// .socials__icon {
+//   transition: fill var(--cubic);
+//   fill: currentColor;
+// }
