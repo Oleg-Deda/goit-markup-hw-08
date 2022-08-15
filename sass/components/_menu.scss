@@ -10,6 +10,7 @@
   border: none;
   background-color: transparent;
   color: currentColor;
+
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -27,7 +28,11 @@
   display: none;
 }
 
-.menu-button .is-open .menu-open-icon {
+.menu-button.is-open .menu-close-icon {
+  display: block;
+}
+
+.menu-button.is-open .menu-open-icon {
   display: none;
 }
 

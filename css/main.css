@@ -189,7 +189,11 @@ img {
   display: none;
 }
 
-.menu-button .is-open .menu-open-icon {
+.menu-button.is-open .menu-close-icon {
+  display: block;
+}
+
+.menu-button.is-open .menu-open-icon {
   display: none;
 }
 
