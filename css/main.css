@@ -155,7 +155,7 @@ img {
 }
 
 .menu-button {
-  position: fixed;
+  position: relative;
   z-index: 1000;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -179,7 +179,7 @@ img {
   }
 }
 .menu-button:active {
-  color: var(--focus-color);
+  color: var(--accent-color);
 }
 .menu-button__icon {
   fill: currentColor;
@@ -189,16 +189,12 @@ img {
   display: none;
 }
 
-.menu-button.is-open .menu-close-icon {
-  display: block;
-}
-
-.menu-button.is-open .menu-open-icon {
+.menu-button .is-open .menu-open-icon {
   display: none;
 }
 
 .menu-container {
-  background-color: var(--background-color);
+  background-color: var(--primary-white-color);
 }
 @media screen and (max-width: 767px) {
   .menu-container {

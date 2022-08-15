@@ -1,5 +1,5 @@
 .menu-button {
-  position: fixed;
+  position: relative;
   z-index: 1000;
   display: inline-flex;
   justify-content: center;
@@ -16,7 +16,7 @@
   }
 
   &:active {
-    color: var(--focus-color);
+    color: var(--accent-color);
   }
 
   &__icon {
@@ -28,16 +28,12 @@
   display: none;
 }
 
-.menu-button.is-open .menu-close-icon {
-  display: block;
-}
-
-.menu-button.is-open .menu-open-icon {
+.menu-button .is-open .menu-open-icon {
   display: none;
 }
 
 .menu-container {
-  background-color: var(--background-color);
+  background-color: var(--primary-white-color);
 
   @media screen and (max-width: 767px) {
     display: none;
@@ -60,7 +56,6 @@
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
-    // justify-content: space-between;
     flex-grow: 1;
   }
 }
