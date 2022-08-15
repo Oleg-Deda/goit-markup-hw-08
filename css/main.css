@@ -379,14 +379,6 @@ img {
   color: currentColor;
 }
 
-.hero__title {
-  font-weight: 900;
-  font-size: 44px;
-  max-width: 696px;
-  margin: 0 auto;
-  margin-bottom: var(--indent);
-}
-
 .registration__title {
   display: block;
   margin: 0;
@@ -905,15 +897,17 @@ img {
 }
 
 .hero__section {
-  padding: 200px 0;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 118px 0;
   background-color: var(--bg-darkgrey-color);
   color: var(--primary-white-color);
   line-height: 1.36;
   text-align: center;
   text-transform: uppercase;
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../images/hero/Hero@1x_sm.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero/Hero@1x_sm.jpg);
   outline: 1px solid black;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/hero@1x_lg.jpg);
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero@1x_lg.jpg);
@@ -921,6 +915,19 @@ img {
   background-position: center;
   background-size: cover;
   background-color: var(--hero-bg-color);
+}
+@media screen and (min-width: 768px) {
+  .hero__section {
+    padding: 200px 0;
+  }
+}
+
+.hero__title {
+  font-weight: 900;
+  font-size: 44px;
+  max-width: 696px;
+  margin: 0 auto;
+  margin-bottom: var(--indent);
 }
 
 .features {
