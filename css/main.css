@@ -1039,6 +1039,18 @@ img {
     text-decoration: none;
   }
 }
+.hero {
+  padding-top: 118px;
+  padding-bottom: 118px;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
+
 .hero__section {
   max-width: 1600px;
   padding-top: 118px;
