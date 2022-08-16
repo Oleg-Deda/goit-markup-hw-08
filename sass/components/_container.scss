@@ -54,3 +54,12 @@
     gap: 0;
   }
 }
+
+.container-mobile {
+  @media screen and (max-width: ($tablet - 0.02px)) {
+    min-height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

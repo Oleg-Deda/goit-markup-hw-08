@@ -1,6 +1,26 @@
 .footer-container {
   display: flex;
   align-items: baseline;
+  //
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+
+  @media screen and (min-width: $tablet) and (max-width: ($desktop - 0.02px)) {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-align: start;
+    gap: 0;
+  }
 }
 .footer__adress {
   font-size: 14px;

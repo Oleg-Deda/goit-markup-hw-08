@@ -8,6 +8,9 @@
   }
 }
 
-@mixin flex-basis($indent, $item) {
-  flex-basis: calc((100% - #{$indent} * (#{$item} - 1)) / #{$item});
+// @mixin flex-basis($indent, $items) {
+//   flex-basis: calc((100% - #{$indent} * (#{$items} - 1)) / #{$items});
+
+@mixin flex-calc($indent: 30px, $items: 3) {
+  flex-basis: calc((100% - (#{$items} - 1) * #{$indent}) / #{$items});
 }
