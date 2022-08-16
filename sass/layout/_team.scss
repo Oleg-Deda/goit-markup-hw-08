@@ -6,7 +6,7 @@
   @extend %reset-list;
   display: flex;
   flex-wrap: wrap;
-  gap: $indent;
+  gap: var(--indent);
 }
 .team {
   background-color: var(--secondary-bg-color);
