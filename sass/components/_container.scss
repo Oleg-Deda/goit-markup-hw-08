@@ -11,22 +11,46 @@
   outline-offset: -2px;
 
   // breakpoint 480px for mobile screen
-  @media screen and (min-width: 480px) {
-    width: 480px;
+  @media screen and (min-width: $mobile) {
+    width: $mobile;
   }
 
   // breakpoint 480px for tablet screen
-  @media screen and (min-width: 768px) {
-    width: 768px;
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
   }
 
   // breakpoint 480px for desctop screen
-  @media screen and (min-width: 1200px) {
-    width: 1200px;
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
   }
 }
 
 .header__container {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.footer-container {
+  text-align: center;
   display: flex;
+  flex-direction: column;
+  gap: 60px;
   align-items: center;
+
+  @media screen and (min-width: $tablet) and (max-width: ($desktop - 0.02px)) {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-align: start;
+    gap: 0;
+  }
 }
