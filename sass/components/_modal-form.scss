@@ -170,9 +170,29 @@
 }
 
 .agreement__link {
+  font-style: normal;
   color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
   text-decoration: underline;
   text-underline-position: under;
+
+  @media screen and (min-width: ($mobile - 0.02px)) {
+    font-size: 12px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    margin-left: 6px;
+    outline-color: transparent;
+    transition: outline-color var(--animation);
+    text-underline-position: under;
+  }
 }
 
 .registration__agreement:focus-within .checkbox__icon {
