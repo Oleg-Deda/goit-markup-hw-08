@@ -143,34 +143,47 @@
     </section>
 
     <!-- About -->
-    <!-- <section class="about ">
+    <section class="about ">
       <div class="container  about__container">
         <h2 class="about__title title">Чим ми займаємося</h2>
         <ul class="about__list">
           <li class="about__item">
-            <img class="about__img" src="./images/about/about1@1x_lg.jpg" alt="Разрабатываем сайты" width="370"
-              height="294" />
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="./images/about/about1@1x_lg.jpg, ./images/about/about1@2x_lg.jpg 2x" type="image/jpg" />
+              <img class="about__img" src="./images/about/about1@1x_lg.jpg" alt="Разрабатываем сайты" width="370"
+                height="294" />
+            </picture>
+
             <div class="about__descr">
-              <p class="about__subtitle">Десктопные приложения</p>
+              <p class="about__subtitle">Десктопні додатки</p>
             </div>
           </li>
           <li class="about__item">
-            <img class="about__img" src="./images/about/about2@1x_lg.jpg" alt="Адаптируем сайты под разные устройства"
-              width="370" height="294" />
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="./images/about/about2@1x_lg.jpg, ./images/about/about2@2x_lg.jpg 2x" type="image/jpg" />
+              <img class="about__img" src="./images/about/about2@1x_lg.jpg" alt="Адаптируем сайты под разные устройства"
+                width="370" height="294" />
+            </picture>
             <div class="about__descr">
-              <p class="about__subtitle">Мобильные приложения</p>
+              <p class="about__subtitle">Мобільні додатки</p>
             </div>
           </li>
           <li class="about__item">
-            <img class="about__img" src="./images/about/about3@1x_lg.jpg" alt="Оформляем дизайн" width="370"
-              height="294" />
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="./images/about/about3@1x_lg.jpg, ./images/about/about3@2x_lg.jpg 2x" type="image/jpg" />
+              <img class="about__img" src="./images/about/about3@1x_lg.jpg" alt="Оформляем дизайн" width="370"
+                height="294" />
+            </picture>
             <div class="about__descr">
-              <p class="about__subtitle">Дизайнерские решения</p>
+              <p class="about__subtitle">Дизайнерські рішення</p>
             </div>
           </li>
         </ul>
       </div>
-    </section> -->
+    </section>
 
     <!-- Team -->
 
@@ -478,12 +491,12 @@
     </div>
   </div>
 
-  <div class="menu-overlay">
+  <!-- <div class="menu-overlay">
     <button type="button" class="menu__close-buton" data-menu-close><svg class="menu__close-icon" width="40"
         height="40">
         <use class="menu-close-icon" href="./images/icons.svg#menu-close-icon"></use>
       </svg>
-    </button>
+    </button> -->
 
   </div>
   </div>
