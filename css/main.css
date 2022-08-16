@@ -537,6 +537,22 @@ img {
   color: var(--secondary-color);
 }
 
+.title {
+  margin-bottom: 30px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--secondary-color);
+  font-size: 28px;
+  line-height: 1.17;
+}
+@media screen and (min-width: 1200px) {
+  .title {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+  }
+}
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -565,8 +581,8 @@ img {
 }
 
 .backdrop.is-hidden .modal {
-  -webkit-transform: translate(-50%, -50%) scale(1, 1);
-          transform: translate(-50%, -50%) scale(1, 1);
+  -webkit-transform: translate(-50%, -50%) scale(0, 1);
+          transform: translate(-50%, -50%) scale(0, 1);
   opacity: 0;
 }
 
@@ -577,12 +593,14 @@ img {
   padding: 40px;
   width: 95vw;
   max-height: 609px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   background-color: var(--primary-white-color);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   opacity: 1;
-  z-index: 15;
+  z-index: 7;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   -webkit-transition: opacity var(--animation), -webkit-transform var(--animation);
@@ -1371,6 +1389,17 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media screen and (min-width: 1200px) {
+  .clients__list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .clients-link {

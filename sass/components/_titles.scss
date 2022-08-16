@@ -92,3 +92,18 @@
   text-align: center;
   color: var(--secondary-color);
 }
+
+.title {
+  margin-bottom: 30px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--secondary-color);
+  font-size: 28px;
+  line-height: 1.17;
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+  }
+}
