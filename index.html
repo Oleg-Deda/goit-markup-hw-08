@@ -430,7 +430,7 @@
         </svg>
       </button>
       <form class="registration">
-        <strong class="registration__title">Оставьте свои данные, мы вам перезвоним</strong>
+        <strong class="registration__title">Залиште свої дані, ми вам передзвонимо</strong>
         <div class="registration__group" role="group">
           <label class="registration__wrap">
             <span class="registration__label">Имя</span>
@@ -459,18 +459,20 @@
           </label>
         </div>
 
-        <label class="registration__agreement">
-          <input class="checkbox visually-hidden" type="checkbox" name="agreement" />
-          <svg class="checkbox__icon " width="16" height="15">
-            <use class="checkbox__icon--uncheck" href="./images/icons.svg#icon-uncheck"></use>
-            <use class="checkbox__icon--check " href=" ./images/icons.svg#icon-check"></use>
-          </svg>
-          <span class="agreement__text">Соглашаюсь с рассылкой и принимаю
-            <a class="agreement__link" href="">Условия
-              договора</a>
-          </span>
-        </label>
+        <div class="registration__checkbox">
+          <label class="registration__agreement">
+            <input class="checkbox visually-hidden" type="checkbox" name="agreement" />
+            <svg class="checkbox__icon " width="16" height="15">
+              <use class="checkbox__icon--uncheck" href="./images/icons.svg#icon-uncheck"></use>
+              <use class="checkbox__icon--check " href=" ./images/icons.svg#icon-check"></use>
+            </svg>
+            <span class="agreement__text">Соглашаюсь с рассылкой и принимаю
 
+            </span>
+          </label>
+          <a class="agreement__link" href="">Условия
+            договора</a>
+        </div>
         <button class="registration__btn" type="submit">Отправить</button>
       </form>
     </div>

@@ -27,6 +27,8 @@
 .btn__close {
   position: absolute;
   display: flex;
+  top: 8px;
+  right: 8px;
   align-items: center;
   justify-content: center;
   fill: currentColor;
@@ -34,16 +36,17 @@
   right: 0;
   width: 30px;
   height: 30px;
-  transform: translate(-8px, 8px);
+  // transform: translate(-8px, 8px);
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--primary-white-color);
   border-radius: 50%;
   transition: color var(--animation), border-color var(--animation);
+  outline-color: transparent;
 
   &:focus,
   &:hover {
     color: var(--accent-color);
-    /* border: 1px solid var(--accent-color); */
+    outline-color: var(--accent-color);
     cursor: pointer;
   }
 }

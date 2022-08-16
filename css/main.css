@@ -342,6 +342,8 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  top: 8px;
+  right: 8px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -353,17 +355,16 @@ img {
   right: 0;
   width: 30px;
   height: 30px;
-  -webkit-transform: translate(-8px, 8px);
-          transform: translate(-8px, 8px);
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--primary-white-color);
   border-radius: 50%;
   -webkit-transition: color var(--animation), border-color var(--animation);
   transition: color var(--animation), border-color var(--animation);
+  outline-color: transparent;
 }
 .btn__close:focus, .btn__close:hover {
   color: var(--accent-color);
-  /* border: 1px solid var(--accent-color); */
+  outline-color: var(--accent-color);
   cursor: pointer;
 }
 
@@ -438,7 +439,6 @@ img {
 
 .registration__title {
   display: block;
-  margin: 0;
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
@@ -541,14 +541,21 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1000;
+  height: 100vh;
+  width: 100vw;
+  z-index: 9000;
   overflow-y: scroll;
   background: rgba(0, 0, 0, 0.2);
   opacity: 1;
   -webkit-transition: opacity var(--animation), visibility var(--animation);
   transition: opacity var(--animation), visibility var(--animation);
+  visibility: visible;
+}
+@media screen and (max-width: 767.98px) {
+  .backdrop {
+    overflow-y: scroll;
+    padding: 93px 15px;
+  }
 }
 
 .backdrop.is-hidden {
@@ -564,24 +571,39 @@ img {
 }
 
 .modal {
-  width: 100%;
   position: absolute;
-  top: 50%;
+  top: 93px;
   left: 50%;
   padding: 40px;
-  max-width: 450px;
+  width: 95vw;
   max-height: 609px;
-  z-index: 1100;
   background-color: var(--primary-white-color);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  -webkit-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
-  -webkit-transition: opacity var(--animation), visibility var(--animation), -webkit-transform var(--animation);
-  transition: opacity var(--animation), visibility var(--animation), -webkit-transform var(--animation);
-  transition: opacity var(--animation), visibility var(--animation), transform var(--animation);
-  transition: opacity var(--animation), visibility var(--animation), transform var(--animation), -webkit-transform var(--animation);
+  opacity: 1;
+  z-index: 15;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: opacity var(--animation), -webkit-transform var(--animation);
+  transition: opacity var(--animation), -webkit-transform var(--animation);
+  transition: transform var(--animation), opacity var(--animation);
+  transition: transform var(--animation), opacity var(--animation), -webkit-transform var(--animation);
+}
+@media screen and (min-width: 479.98px) {
+  .modal {
+    max-width: 450px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal {
@@ -590,21 +612,39 @@ img {
   }
 }
 
-.registration {
-  text-align: center;
-}
-
 .registration__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
   margin-bottom: 20px;
 }
 
+.registration__title {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--secondary-color);
+}
+
 .registration__wrap {
-  display: block;
-  font-size: 12px;
-  line-height: 1.16;
   position: relative;
-  display: block;
-  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: var(--secondary-color);
 }
 
 .registration__wrap:last-child {
@@ -612,40 +652,34 @@ img {
 }
 
 .registration__label {
-  display: block;
-  text-align: left;
   margin-bottom: 4px;
-  padding-left: 2px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
 }
 
 .registration__input {
-  display: block;
-  padding: 12px 42px;
+  padding: 11px 42px;
   height: 40px;
   width: 100%;
-  outline: none;
+  outline: transparent;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   -webkit-transition: border-color var(--animation);
   transition: border-color var(--animation);
 }
-@media screen and (min-width: 1200px) {
-  .registration__input {
-    width: 448px;
-  }
-}
 .registration__input:hover, .registration__input:focus {
   border-color: var(--accent-color);
 }
 
-.registration__group {
-  position: relative;
-  margin-bottom: 10px;
-}
-
 .registration__icon {
   position: absolute;
-  display: block;
+  margin-right: 8px;
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  top: 50%;
   bottom: 11px;
   left: 12px;
   -webkit-transition: var(--animation);
@@ -661,61 +695,83 @@ img {
 }
 
 .registration__message {
-  display: block;
-  margin-bottom: 20px;
-  padding: 12px 16px;
-  width: 100%;
+  max-width: 448px;
   height: 120px;
+  padding: 12px 16px;
   resize: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   line-height: 1.14;
 }
-@media screen and (min-width: 1200px) {
-  .registration__message {
-    width: 448px;
-  }
-}
 
 .registration__message::-webkit-input-placeholder {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 
 .registration__message::-moz-placeholder {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 
 .registration__message:-ms-input-placeholder {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 
 .registration__message::-ms-input-placeholder {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 
 .registration__message::placeholder {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 
-.registration__agreement {
-  text-align: left;
+.registration__checkbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
   margin-bottom: 30px;
-  color: var(--primary-color);
 }
-@media screen and (max-width: 1199px) {
+
+.registration__agreement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+}
+@media screen and (min-width: 1200px) {
   .registration__agreement {
-    font-size: 12px;
-    line-height: 1.1666666667;
+    color: var(--primary-color);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    margin-left: 8px;
   }
 }
 
@@ -743,19 +799,19 @@ img {
 }
 
 .agreement__link {
-  font-style: normal;
   color: var(--accent-color);
+  font-style: normal;
+  font-weight: 400;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-weight: 400;
   font-size: 10px;
   line-height: 1.16;
   letter-spacing: 0.03em;
-  text-decoration: underline;
-  text-underline-position: under;
 }
 @media screen and (min-width: 479.98px) {
   .agreement__link {
