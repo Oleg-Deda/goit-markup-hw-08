@@ -445,7 +445,7 @@ img {
   }
 }
 
-.footer__list, .clients__list, .socials__list, .team__item, .about__list, .features__list {
+.footer__list, .socials__list, .team__item, .about__list, .features__list, .clients__list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -533,13 +533,25 @@ img {
   }
 }
 
-.clients__title {
-  color: var(--secondary-color);
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  text-align: center;
-  margin-bottom: 50px;
+.clients__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media screen and (min-width: 1200px) {
+  .clients__list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .footer__title {
@@ -1433,36 +1445,19 @@ img {
 }
 
 .clients__item {
-  display: block;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-preferred-size: calc((100% - (2 - 1) * 30px) / 2);
+      flex-basis: calc((100% - (2 - 1) * 30px) / 2);
 }
-
-.clients__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 30px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+@media screen and (min-width: 768px) {
+  .clients__item {
+    -ms-flex-preferred-size: calc((100% - (3 - 1) * 30px) / 3);
+        flex-basis: calc((100% - (3 - 1) * 30px) / 3);
+  }
 }
 @media screen and (min-width: 1200px) {
-  .clients__list {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  .clients__item {
+    -ms-flex-preferred-size: calc((100% - (6 - 1) * 30px) / 6);
+        flex-basis: calc((100% - (6 - 1) * 30px) / 6);
   }
 }
 
@@ -1476,7 +1471,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 170px;
+  min-width: 170px;
   height: 92px;
   color: var(--icon-color);
   border: 1px solid var(--icon-color);
@@ -1491,7 +1486,6 @@ img {
 
 .clients-icon {
   fill: currentColor;
-  display: inline-block;
   fill: currentColor;
   vertical-align: middle;
 }
