@@ -3,9 +3,6 @@
 }
 
 .clients__list {
-  // display: block;
-  // justify-content: center;
-  // align-items: center;
   @include flex-calc($indent, $items: 2);
   @media screen and (min-width: $tablet) {
     @include flex-calc($indent, $items: 3);

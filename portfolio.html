@@ -249,19 +249,27 @@
     </section>
   </main>
   <!--footer-->
+
   <footer class="footer" id="contacts">
     <div class="container footer-container">
       <div class="footer__adress">
-        <a class="footer__logo link" href="" lang="en">Web<span class="footer__logo--accent">Studio</span></a>
-        <address class="address">
-          <p>г. Киев, пр-т Леси Украинки, 26</p>
-          <a class="address footer__email link" href="info@example.com">info@example.com</a>
-          <a class="address footer__tel link" href="tel:+38091111111">+38 099 111 11 11</a>
+        <a class="footer__logo logo" href="" lang="en">Web<span class="logo--dark">Studio</span></a>
+        <address>
+          <p class="footer__street-address">м. Київ, пр-т Лесі Українки, 26</p>
+
+          <ul class="address-menu">
+            <li class="address-menu__item">
+              <a class="address footer__email link" href="info@example.com">info@example.com</a>
+            <li class="address-menu__item"></li>
+            <a class="address footer__tel link" href="tel:+38091111111">+38 099 111 11 11</a>
+            </li>
+          </ul>
+
         </address>
       </div>
       <div class="footer__links">
-        <h2 class="footer__title">присоединяйтесь</h2>
-        <ul class="footer__list list">
+        <h2 class="footer__title">приєднуйтесь</h2>
+        <ul class="footer__list">
           <li class="footer__item">
             <a class="footer__link link" href="" target="_blank" rel="noopener noreferrer" aria-label="instagram">
               <svg class="socials__icon" width="20" height="20">
@@ -288,22 +296,23 @@
           </li>
         </ul>
       </div>
-      <div class="subscription">
-        <h2 class="subscription__title">Подпишитесь на рассылку</h2>
-        <form class="subscription__form">
-          <div class="subscription__container">
-            <input class="subscription__email" type="email" name="email-user" id="email" placeholder="E-mail" />
-            <button data-modal-open class="subscription__button" type="submit">
-              Подписаться
-              <svg class="send-icon" width="24" height="24">
-                <use href="./images/icons.svg#icon-send"></use>
-              </svg>
-            </button>
-          </div>
-        </form>
-      </div>
+      <form class="subscription__form">
+        <h3 class="subscription__title">Підпишіться на розсилку</h3>
+        <!-- <div class="subscription"> -->
+
+        <div class="subscription__container">
+          <input class="subscription__email" type="email" name="email-user" id="email" placeholder="E-mail" />
+          <button data-modal-open class="subscription__button" type="submit">
+            Підписатися
+            <svg class="send-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-send"></use>
+            </svg>
+          </button>
+        </div>
+      </form>
     </div>
   </footer>
+
 </body>
 
 </html>

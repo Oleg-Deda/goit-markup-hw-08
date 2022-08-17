@@ -1,32 +1,39 @@
 .logo {
-  color: var(--accent-color);
+  @extend %reset-link;
+  display: inline-block;
   font-family: 'Raleway';
   font-weight: 700;
   font-size: 24px;
   line-height: calc(28 / 24);
+  color: var(--accent-color);
 
   @media screen and (min-width: 1200px) {
     font-size: 26px;
+    letter-spacing: 0.03em;
     line-height: calc(31 / 26);
   }
 }
 
-.header__logo {
-  // margin-right: 93px;
-  margin: 0;
-  padding: 16px 0px;
-  @media screen and (min-width: 768px) {
-    margin-right: 88px;
-    padding: 26px 0px;
-  }
+// .header__logo {
+//   // margin-right: 93px;
+//   margin: 0;
+//   padding: 16px 0px;
+//   @media screen and (min-width: 768px) {
+//     margin-right: 88px;
+//     padding: 26px 0px;
+//   }
 
-  @media screen and (min-width: 1200px) {
-    margin-right: 93px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-  }
+//   @media screen and (min-width: 1200px) {
+//     margin-right: 93px;
+//     padding-top: 25px;
+//     padding-bottom: 25px;
+//   }
+// }
+
+.logo--light {
+  color: var(--logo-color);
 }
 
-.logo-accent {
-  color: var(--secondary-color);
+.logo--dark {
+  color: var(--primary-white-color);
 }
