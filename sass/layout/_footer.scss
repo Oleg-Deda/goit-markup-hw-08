@@ -62,7 +62,8 @@
   }
 }
 .address-menu {
-  list-style: none;
+  @extend %reset-link;
+  font-style: normal;
 }
 
 .address-menu__item:not(:last-child) {
