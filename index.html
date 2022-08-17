@@ -39,7 +39,7 @@
               <a class="nav__link nav__link--current" href="./index.html">Студія</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="./portfolio.html">Портфоліо</a>
+              <a class="nav__link " href="./portfolio.html">Портфоліо</a>
             </li>
             <li class="nav__item">
               <a class="nav__link" href="#contacts">Контакти</a>
@@ -152,37 +152,38 @@
         <h2 class="about__title title">Чим ми займаємося</h2>
         <ul class="about__list">
           <li class="about__item">
-            <picture>
-              <source media="(min-width: 1200px)"
-                srcset="./images/about/about1@1x_lg.jpg, ./images/about/about1@2x_lg.jpg 2x" type="image/jpg" />
-              <img class="about__img" src="./images/about/about1@1x_lg.jpg" alt="Разрабатываем сайты" width="370"
-                height="294" />
-            </picture>
+            <div class="about__thumb">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="./images/about/about1@1x_lg.jpg, ./images/about/about1@2x_lg.jpg 2x" type="image/jpg" />
+                <img class="about__img" src="./images/about/about1@1x_lg.jpg" alt="Разрабатываем сайты" width="370"
+                  height="294" />
+              </picture>
+              <h3 class="about__subtitle">Десктопні додатки</h3>
+            </div>
+          </li>
+          <li class="about__item">
+            <div class="about__thumb">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="./images/about/about2@1x_lg.jpg, ./images/about/about2@2x_lg.jpg 2x" type="image/jpg" />
+                <img class="about__img" src="./images/about/about2@1x_lg.jpg"
+                  alt="Адаптируем сайты под разные устройства" width="370" height="294" />
+              </picture>
 
-            <div class="about__descr">
-              <p class="about__subtitle">Десктопні додатки</p>
+              <h3 class="about__subtitle">Мобільні додатки</h3>
             </div>
           </li>
           <li class="about__item">
-            <picture>
-              <source media="(min-width: 1200px)"
-                srcset="./images/about/about2@1x_lg.jpg, ./images/about/about2@2x_lg.jpg 2x" type="image/jpg" />
-              <img class="about__img" src="./images/about/about2@1x_lg.jpg" alt="Адаптируем сайты под разные устройства"
-                width="370" height="294" />
-            </picture>
-            <div class="about__descr">
-              <p class="about__subtitle">Мобільні додатки</p>
-            </div>
-          </li>
-          <li class="about__item">
-            <picture>
-              <source media="(min-width: 1200px)"
-                srcset="./images/about/about3@1x_lg.jpg, ./images/about/about3@2x_lg.jpg 2x" type="image/jpg" />
-              <img class="about__img" src="./images/about/about3@1x_lg.jpg" alt="Оформляем дизайн" width="370"
-                height="294" />
-            </picture>
-            <div class="about__descr">
-              <p class="about__subtitle">Дизайнерські рішення</p>
+            <div class="about__thumb">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="./images/about/about3@1x_lg.jpg, ./images/about/about3@2x_lg.jpg 2x" type="image/jpg" />
+                <img class="about__img" src="./images/about/about3@1x_lg.jpg" alt="Оформляем дизайн" width="370"
+                  height="294" />
+              </picture>
+
+              <h3 class="about__subtitle">Дизайнерські рішення</h3>
             </div>
           </li>
         </ul>
@@ -482,7 +483,6 @@
       </div>
       <form class="subscription__form">
         <h3 class="subscription__title">Підпишіться на розсилку</h3>
-        <!-- <div class="subscription"> -->
 
         <div class="subscription__container">
           <input class="subscription__email" type="email" name="email-user" id="email" placeholder="E-mail" />
