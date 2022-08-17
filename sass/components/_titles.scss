@@ -34,6 +34,24 @@
   text-transform: uppercase;
 }
 
+.team__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: $indent;
+
+  @media screen and (min-width: $tablet) {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+}
+
 .clients__title {
   color: var(--secondary-color);
   font-size: 36px;
