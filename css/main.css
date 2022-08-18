@@ -209,21 +209,6 @@ img {
 }
 
 /* project set */
-.project__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: var(--indent);
-}
-
-.project__item {
-  --items: 3;
-  -ms-flex-preferred-size: calc((100% - 30px * (3 - 1)) / var(--items));
-      flex-basis: calc((100% - 30px * (3 - 1)) / var(--items));
-}
-
 .hero__button {
   display: inline-block;
   padding: 10px 32px;
@@ -871,7 +856,7 @@ img {
 
 .subscription__email {
   padding: 15px 16px;
-  width: 95vw;
+  width: 90vw;
   max-width: 450px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -1838,18 +1823,18 @@ img {
   gap: 30px;
 }
 
-.roject__item {
+.project-cards {
   -ms-flex-preferred-size: calc((100% - (1 - 1) * 30px) / 1);
       flex-basis: calc((100% - (1 - 1) * 30px) / 1);
 }
 @media screen and (min-width: 768px) {
-  .roject__item {
+  .project-cards {
     -ms-flex-preferred-size: calc((100% - (2 - 1) * 30px) / 2);
         flex-basis: calc((100% - (2 - 1) * 30px) / 2);
   }
 }
 @media screen and (min-width: 1200px) {
-  .roject__item {
+  .project-cards {
     -ms-flex-preferred-size: calc((100% - (3 - 1) * 30px) / 3);
         flex-basis: calc((100% - (3 - 1) * 30px) / 3);
   }

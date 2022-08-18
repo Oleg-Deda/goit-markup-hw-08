@@ -1,11 +1,11 @@
 /* project set */
-.project__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--indent);
-}
+// .project__list {
+//   display: flex;
+//   flex-wrap: wrap;
+//   gap: $indent;
+// }
 
-.project__item {
-  --items: 3;
-  flex-basis: calc((100% - #{$indent} * (#{$items} - 1)) / var(--items));
-}
+// .project__item {
+//   --items: 3;
+//   flex-basis: calc((100% - #{$indent} * (#{$items} - 1)) / var(--items));
+// }

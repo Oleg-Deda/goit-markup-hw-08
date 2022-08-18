@@ -28,7 +28,7 @@
   gap: $indent;
 }
 
-.roject__item {
+.project-cards {
   @include flex-calc($indent, $items: 1);
 
   @media screen and (min-width: $tablet) {
