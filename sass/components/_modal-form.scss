@@ -240,7 +240,8 @@
 }
 
 .registration__agreement:focus-within .checkbox__icon {
-  border: 1px solid var(--accent-color);
+  border: -1px solid var(--accent-color);
+  border-radius: 4px;
 }
 
 .registration__agreement:focus-within .checkbox__icon--uncheck {
