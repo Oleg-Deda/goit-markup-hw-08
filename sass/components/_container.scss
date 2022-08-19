@@ -39,6 +39,7 @@
   flex-direction: column;
   gap: 60px;
   align-items: center;
+  align-items: baseline;
 
   @media screen and (min-width: $tablet) and (max-width: ($desktop - 0.02px)) {
     flex-direction: row;

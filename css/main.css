@@ -140,6 +140,9 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .footer-container {
