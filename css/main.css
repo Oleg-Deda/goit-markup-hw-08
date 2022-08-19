@@ -942,7 +942,9 @@ img {
   position: absolute;
   top: 10px;
   right: 10px;
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   margin: 0;
   padding: 0;
   background-color: transparent;
