@@ -72,6 +72,10 @@
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+work-list__img {
+  width: 100%;
+}
+
 .overlay__text {
   font-weight: 400;
   line-height: 1.55;
@@ -86,6 +90,10 @@
 .project__elements {
   position: relative;
   overflow: hidden;
+}
+
+.project__elements-foto {
+  width: 100%;
 }
 .project__overlay {
   position: absolute;

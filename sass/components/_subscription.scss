@@ -16,7 +16,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  // gap: 20px;
   align-items: center;
   @media screen and (min-width: $desktop) {
     flex-direction: row;
@@ -27,11 +27,11 @@
 .subscription__form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  // gap: 20px;
   // align-items: center;
   @media screen and (min-width: $desktop) {
     // flex-direction: row;
-    gap: 12px;
+    // gap: 12px;
   }
 }
 

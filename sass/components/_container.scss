@@ -7,8 +7,8 @@
   margin-left: auto;
 
   // width: 1200px;
-  // outline: 2px solid red;
-  // outline-offset: -2px;
+  outline: 2px solid red;
+  outline-offset: -2px;
 
   // breakpoint 480px for mobile screen
   @media screen and (min-width: $mobile) {
@@ -37,7 +37,6 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-
   gap: 60px;
   align-items: center;
 
