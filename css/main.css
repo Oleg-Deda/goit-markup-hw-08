@@ -322,6 +322,36 @@ img {
   background-color: var(--accent-color);
 }
 
+.btn__close {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  fill: currentColor;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  -webkit-transform: translate(-8px, 8px);
+          transform: translate(-8px, 8px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--primary-white-color);
+  border-radius: 50%;
+  -webkit-transition: color var(--animation), border-color var(--animation);
+  transition: color var(--animation), border-color var(--animation);
+}
+.btn__close:focus, .btn__close:hover {
+  color: var(--accent-color);
+  /* border: 1px solid var(--accent-color); */
+  cursor: pointer;
+}
+
 .project, .clients, .team, .about, .features {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -1019,7 +1049,6 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 32px;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -1254,80 +1283,78 @@ img {
   }
 }
 
-.hero {
+.hero__section {
   padding-top: 118px;
   padding-bottom: 118px;
   text-align: center;
 }
 @media screen and (min-width: 1200px) {
-  .hero {
+  .hero__section {
     padding-top: 200px;
     padding-bottom: 200px;
   }
 }
 
-.hero__section {
+.overlay {
   max-width: 1600px;
-  padding-top: 118px;
-  padding-bottom: 118px;
-  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   background-color: var(--hero-bg-color);
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/Hero@1x_sm.jpg);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/Hero@1x_sm.jpg);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/hero@1x_sm.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero@1x_sm.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
-@media screen and (min-width: 1200px) {
-  .hero__section {
-    padding-top: 200px;
-    padding-bottom: 200px;
-  }
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/Hero@1x_sm.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/Hero@1x_sm.jpg);
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .hero__section {
+  .overlay {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/Hero@2x_sm.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/Hero@2x_sm.jpg);
   }
 }
 @media screen and (min-width: 768px) {
-  .hero__section {
+  .overlay {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/Hero@1x_md.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/Hero@1x_md.jpg);
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
-  .hero__section {
+  .overlay {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/Hero@2x_md.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/Hero@2x_md.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
-  .hero__section {
+  .overlay {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/hero@1x_lg.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero@1x_lg.jpg);
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
-  .hero__section {
+  .overlay {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/hero@2x_lg.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero@2x_lg.jpg);
   }
 }
-.hero__section .hero__title {
+
+.hero__title {
+  max-width: 360px;
   font-weight: 900;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
   font-size: 26px;
   line-height: 1.6153846154;
-  line-height: 1.36;
-  text-align: center;
   text-transform: uppercase;
-  margin: 0 auto;
+  letter-spacing: 0.06em;
   color: var(--primary-white-color);
-  margin-bottom: var(--indent);
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 1200px) {
-  .hero__section .hero__title {
+  .hero__title {
+    max-width: 696px;
     font-size: 44px;
     line-height: 1.36;
   }
@@ -1358,36 +1385,6 @@ img {
 }
 .hero__button:hover, .hero__button:focus {
   background-color: #188ce8;
-}
-
-.btn__close {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  fill: currentColor;
-  top: 0;
-  right: 0;
-  width: 30px;
-  height: 30px;
-  -webkit-transform: translate(-8px, 8px);
-          transform: translate(-8px, 8px);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: var(--primary-white-color);
-  border-radius: 50%;
-  -webkit-transition: color var(--animation), border-color var(--animation);
-  transition: color var(--animation), border-color var(--animation);
-}
-.btn__close:focus, .btn__close:hover {
-  color: var(--accent-color);
-  /* border: 1px solid var(--accent-color); */
-  cursor: pointer;
 }
 
 .features {
