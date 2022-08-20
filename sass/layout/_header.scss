@@ -6,7 +6,7 @@
 .menu-button {
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 20px;
   display: inline-flex;
   margin: 0;
   padding: 0;
@@ -15,7 +15,7 @@
   z-index: 9000;
   transition: color var(--animation);
 
-  @media screen and (min-width: $mobile) {
+  @media screen and (min-width: $tablet) {
     display: none;
   }
 

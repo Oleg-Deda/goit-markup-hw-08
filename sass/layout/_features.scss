@@ -63,6 +63,10 @@
   // text-align: center;
   line-height: 1.14;
   text-transform: uppercase;
+
+  @media screen and (max-width: ($tablet - 0.02px)) {
+    text-align: center;
+  }
 }
 
 .features__descr {
