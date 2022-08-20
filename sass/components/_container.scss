@@ -38,8 +38,12 @@
   display: flex;
   flex-direction: column;
   gap: 60px;
-  align-items: center;
+
   align-items: baseline;
+
+  @media screen and (max-width: ($tablet - 0.02px)) {
+    align-items: center;
+  }
 
   @media screen and (min-width: $tablet) and (max-width: ($desktop - 0.02px)) {
     flex-direction: row;
